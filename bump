@@ -1,0 +1,6 @@
+yarn build
+node bump.js
+git add .
+git commit -m "$*"
+git push
+npm publish --access=public

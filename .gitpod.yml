@@ -1,0 +1,7 @@
+tasks:
+
+  - name: Init
+    init: bash replitinit.sh
+
+  - name: Auth
+    command: printf "//registry.npmjs.org/:_authToken=${NPM_TOKEN}\n" >> ~/.npmrc

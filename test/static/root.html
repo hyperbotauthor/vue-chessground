@@ -1,0 +1,13 @@
+<script src="stockfish.js"></script>
+<pre id="out"></pre>
+<script>
+const lines = []
+Stockfish().then(sf => {
+  sf.addMessageListener(line => {
+    lines.push(line)
+    document.getElementById("out").innerHTML = lines.join("\n")
+  });
+
+  sf.postMessage('uci');
+});
+</script>
